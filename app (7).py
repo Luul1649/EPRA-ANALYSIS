@@ -6,12 +6,12 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # 1. Page Configuration (EPRA Theme)
-st.set_page_config(page_title="Smart Grid Dashboard", page_icon="⚡", layout="wide")
+st.set_page_config(page_title="Kaggle Energy Demand Dashboard", page_icon="📊", layout="wide")
 
-st.title("⚡Smart Grid Demand Forecasting: A Framework for EPRA Compliance")
+st.title("📊 AI Energy Demand Forecasting Dashboard (Kaggle Dataset)")
 st.markdown("""
-This production-grade interface demonstrates how machine learning optimizes **national grid dispatch management**. 
-By forecasting electricity consumption, **EPRA** can maximize green energy utilization (Geothermal/Hydro) and minimize blackouts.
+This production-grade interface utilizes a high-quality **Kaggle Hourly Energy Dataset** to demonstrate how machine learning models time-series power consumption. 
+This predictive framework represents a **Proof of Concept (PoC)** mirroring the grid optimization systems monitored by energy regulatory bodies like **EPRA**.
 """)
 
 # 2. Caching Data and Model Training (So the app runs fast!)
@@ -86,7 +86,8 @@ with col1:
         st.info("ℹ️ **NORMAL STABLE GRID STATUS:** Standard economic dispatch operational profiles are sufficient.")
 
 with col2:
-    st.subheader("📊 System Metric Validation")
+    with col2:
+    st.subheader("📊 Kaggle Model Validation")
     st.metric(label="Established Model MAE Accuracy", value="1,682.67 MW", delta="Validated Baseline", delta_color="normal")
     st.markdown("""
     *   **Algorithm:** Gradient Boosted Trees (XGBoost Regressor)
@@ -96,7 +97,7 @@ with col2:
 
 # 5. Bottom Panel: Interactive Analytics Charts
 st.markdown("---")
-st.subheader("📈 Historical Grid Analytics View")
+st.subheader("📈 Historical Kaggle Grid Analytics View")
 
 num_hours = st.slider("Select how many historical hours to plot for verification:", 24, 720, 168)
 recent_data = df.tail(num_hours)
