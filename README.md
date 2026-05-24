@@ -1,11 +1,14 @@
-# EPRA-ANALYSIS
-# ⚡ EPRA Smart Grid: Predictive Dispatch Optimization Engine
+# ⚡ Smart Grid Demand Forecasting: A Framework for EPRA Compliance
 
-An end-to-end Machine Learning and Time-Series forecasting architecture built to optimize national electricity grids. This application enables energy regulatory bodies like the **Energy and Petroleum Regulatory Authority (EPRA)** to predict peak load demands, maximize renewable energy utility (Geothermal/Hydro), and securely mitigate the risks of regional load-shedding.
+This project is a high-performance **Proof of Concept (PoC)** designed to demonstrate how Machine Learning can optimize national grid dispatch operations. Built using a comprehensive energy dataset from **Kaggle**, the core architecture is engineered to align with the infrastructure forecasting needs of energy regulatory bodies like Kenya's **Energy and Petroleum Regulatory Authority (EPRA)**.
+
+## 📈 Methodology & Data Strategy
+Due to the confidentiality of local grid utility metrics, this system was developed using a world-class historical load dataset from Kaggle to build and validate the predictive logic. The underlying machine learning pipeline is fully decoupled and ready to plug directly into EPRA's real-time SCADA or API infrastructure.
 
 ## 📊 Project Performance Summary
+* **Source Dataset:** Kaggle Hourly Energy & Weather Data
 * **Algorithm:** Extreme Gradient Boosting (XGBoost Regressor)
-* **Target Metric Accuracy:** Mean Absolute Error (MAE) of **1,682.67 MW**
+* **Model Baseline Accuracy:** Mean Absolute Error (MAE) of **1,682.67 MW**
 * **Primary Drivers Identified:** Historical Load Lag (24 Hours Prior), Time of Day Peaks, and Weekend Industrial Drops.
 * **Interface Deployment:** Streamlit Web Application Framework
 
@@ -37,7 +40,3 @@ Navigate to the directory in your Command Prompt/Terminal and fire up the dashbo
 streamlit run app.py
 ```
 
-## 📋 Operational Decision Framework Built-In
-The dashboard houses an automated recommendation engine that interprets predictions for grid operations:
-* **High-Demand Quantile (>85th percentile):** Formulates direct alerts to ramp up secondary base-loads instantly to stabilize peak cooking/lighting hour loads.
-* **Low-Valley Quantile (<15th percentile):** Instructs control centers to dial back expensive thermal generation, saving millions by relying 100% on eco-friendly geothermal baseloads.
