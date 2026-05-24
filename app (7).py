@@ -85,7 +85,6 @@ with col1:
     else:
         st.info("ℹ️ **NORMAL STABLE GRID STATUS:** Standard economic dispatch operational profiles are sufficient.")
 
-with col2:
     with col2:
     st.subheader("📊 Kaggle Model Validation")
     st.metric(label="Established Model MAE Accuracy", value="1,682.67 MW", delta="Validated Baseline", delta_color="normal")
