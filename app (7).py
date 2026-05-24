@@ -6,9 +6,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # 1. Page Configuration (EPRA Theme)
-st.set_page_config(page_title="EPRA Smart Grid Dashboard", page_icon="⚡", layout="wide")
+st.set_page_config(page_title="Smart Grid Dashboard", page_icon="⚡", layout="wide")
 
-st.title("⚡ EPRA Smart Grid: AI Energy Demand Forecasting Engine")
+st.title("⚡Smart Grid Demand Forecasting: A Framework for EPRA Compliance")
 st.markdown("""
 This production-grade interface demonstrates how machine learning optimizes **national grid dispatch management**. 
 By forecasting electricity consumption, **EPRA** can maximize green energy utilization (Geothermal/Hydro) and minimize blackouts.
